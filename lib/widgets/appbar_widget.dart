@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:crowdapp/utils/colors.dart';
 import 'package:icons_flutter/icons_flutter.dart';
+import 'package:iconsax/iconsax.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
 
@@ -34,14 +35,14 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           onPressed: () {},
           icon: const Icon(
-            Feather.search,
+            Iconsax.search_favorite,
             color: AppColors.grey800,
           ),
         ),
         IconButton(
           onPressed: () {},
           icon: const Icon(
-            Feather.log_out,
+            Iconsax.logout,
             color: AppColors.grey800,
           ),
         ),

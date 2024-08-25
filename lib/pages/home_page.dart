@@ -2,6 +2,7 @@ import 'package:icons_flutter/icons_flutter.dart';
 import 'package:crowdapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:crowdapp/pages/export_pages.dart';
+import 'package:iconsax/iconsax.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -46,11 +47,11 @@ class _HomePageState extends State<HomePage> {
         destinations: const [
           NavigationDestination(
             icon: Icon(
-              Feather.home,
+              Iconsax.home,
               size: 25.0,
             ),
             selectedIcon: Icon(
-              Feather.home,
+              Iconsax.home,
               size: 25.0,
               color: AppColors.pallete700,
             ),
@@ -58,11 +59,11 @@ class _HomePageState extends State<HomePage> {
           ),
           NavigationDestination(
             icon: Icon(
-              Feather.archive,
+              Iconsax.archive,
               size: 25.0,
             ),
             selectedIcon: Icon(
-              Feather.archive,
+              Iconsax.archive,
               size: 25.0,
               color: AppColors.pallete700,
             ),
@@ -70,11 +71,11 @@ class _HomePageState extends State<HomePage> {
           ),
           NavigationDestination(
             icon: Icon(
-              Feather.map,
+              Iconsax.map,
               size: 25.0,
             ),
             selectedIcon: Icon(
-              Feather.map,
+              Iconsax.map,
               size: 25.0,
               color: AppColors.pallete700,
             ),
@@ -82,11 +83,11 @@ class _HomePageState extends State<HomePage> {
           ),
           NavigationDestination(
             icon: Icon(
-              Feather.user,
+              Iconsax.user,
               size: 25.0,
             ),
             selectedIcon: Icon(
-              Feather.user,
+              Iconsax.user,
               size: 25.0,
               color: AppColors.pallete700,
             ),
