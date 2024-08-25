@@ -2,7 +2,6 @@ import 'package:icons_flutter/icons_flutter.dart';
 import 'package:crowdapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:crowdapp/pages/export_pages.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -32,34 +31,6 @@ class _HomePageState extends State<HomePage> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'TaraLibrary',
-          style: GoogleFonts.getFont('Lato',
-            color: AppColors.pallete700,
-            fontWeight: FontWeight.w600,
-            fontSize: 25.0,
-          ),
-        ),
-        toolbarHeight: 60,
-        forceMaterialTransparency: true,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Feather.search,
-              color: AppColors.grey800,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Feather.log_out,
-              color: AppColors.grey800,
-            ),
-          ),
-        ],
-      ),
       body: bodyWidget,
       bottomNavigationBar: NavigationBar(
         selectedIndex: selectedIndex,
@@ -72,7 +43,6 @@ class _HomePageState extends State<HomePage> {
             selectedIndex = index;
           });
         },
-        height: 65,
         destinations: const [
           NavigationDestination(
             icon: Icon(

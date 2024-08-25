@@ -11,33 +11,16 @@ class RecentSectionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const AppBarWidget(
+        title: 'Recent Activities',
+        textColor: AppColors.pallete700,
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Recent Activities',
-              style: GoogleFonts.getFont(
-                'Lato',
-                fontSize: 23,
-                fontWeight: FontWeight.w600,
-                color: AppColors.grey800,
-              ),
-            ),
-            Text(
-              "Your activity in the app",
-              style: GoogleFonts.getFont(
-                'Lato',
-                fontSize: 17,
-                fontWeight: FontWeight.w400,
-                color: Colors.grey,
-              ),
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
             const AletWidget(),
             const SizedBox(
               height: 5.0,
@@ -71,7 +54,7 @@ class RecentSectionPage extends StatelessWidget {
                       title: Text(
                         'Reference Section',
                         style: GoogleFonts.getFont(
-                          'Lato',
+                          'Poppins',
                           color: AppColors.pallete950,
                           fontWeight: FontWeight.w500,
                         ),
@@ -88,7 +71,7 @@ class RecentSectionPage extends StatelessWidget {
                       subtitle: Text(
                         'Visited last January 21, 2024',
                         style: GoogleFonts.getFont(
-                          'Lato',
+                          'Poppins',
                           color: AppColors.pallete900,
                           fontSize: 12.0,
                         ),

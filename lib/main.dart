@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.backgroundColor,
+        scaffoldBackgroundColor: AppColors.grey100,
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
           backgroundColor: AppColors.backgroundColor,
@@ -24,10 +24,10 @@ class MyApp extends StatelessWidget {
         navigationBarTheme: NavigationBarThemeData(
           labelTextStyle: WidgetStateProperty.all(
             GoogleFonts.getFont(
-              'Lato',
+              'Poppins',
               color: AppColors.grey800,
-              fontWeight: FontWeight.w500,
-              fontSize: 15.0,
+              fontWeight: FontWeight.w400,
+              fontSize: 13.0,
             ),
           ),
         ),

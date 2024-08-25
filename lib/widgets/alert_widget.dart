@@ -33,9 +33,9 @@ class AletWidget extends StatelessWidget {
               Text(
                 'Please allow the app to access your\ndevice to follow your recent activity.',
                 style: GoogleFonts.getFont(
-                  'Lato',
+                  'Poppins',
                   color: AppColors.grey800,
-                  fontSize: 15.0,
+                  fontSize: 13.0,
                 ),
                 maxLines: 2,
                 softWrap: true,

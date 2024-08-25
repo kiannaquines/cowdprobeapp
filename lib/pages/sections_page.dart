@@ -54,43 +54,19 @@ class _SectionsPageState extends State<SectionsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const AppBarWidget(title: 'Library Sections',textColor: AppColors.grey600,),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Library Sections',
-              style: GoogleFonts.getFont(
-                'Lato',
-                fontSize: 23,
-                fontWeight: FontWeight.w600,
-                color: AppColors.grey800,
-              ),
-            ),
-            Text(
-              "Library sections facilities",
-              style: GoogleFonts.getFont(
-                'Lato',
-                fontSize: 17,
-                fontWeight: FontWeight.w400,
-                color: Colors.grey,
-              ),
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
-            const AletWidget(),
-            const SizedBox(
-              height: 7.0,
-            ),
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  crossAxisSpacing: 10.0,
-                  mainAxisSpacing: 10.0,
+                  crossAxisSpacing: 20.0,
+                  mainAxisSpacing: 20.0,
                   childAspectRatio: 2 / 3,
                 ),
                 itemCount: sections.length,
@@ -123,11 +99,11 @@ class SectionItemBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: const BorderRadius.only(
-        bottomLeft: Radius.circular(10.0),
-        bottomRight: Radius.circular(10.0),
+        bottomLeft: Radius.circular(5.0),
+        bottomRight: Radius.circular(5.0),
       ),
       child: Container(
-        color: AppColors.grey100,
+        color: AppColors.backgroundColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -135,8 +111,8 @@ class SectionItemBuilder extends StatelessWidget {
             Expanded(
               child: ClipRRect(
                 borderRadius: const BorderRadius.vertical(
-                  top: Radius.circular(10.0),
-                  bottom: Radius.circular(10.0),
+                  top: Radius.circular(5.0),
+                  bottom: Radius.circular(5.0),
                 ),
                 child: Stack(
                   fit: StackFit.expand,
@@ -160,12 +136,12 @@ class SectionItemBuilder extends StatelessWidget {
                     ),
                     Positioned(
                       top: 1,
-                      right: 1,
+                      left: 1,
                       child: IconButton(
                         onPressed: () {},
                         icon: const Icon(
                           Icons.bookmark,
-                          color: AppColors.pallete100,
+                          color: AppColors.backgroundColor,
                         ),
                       ),
                     ),
@@ -180,7 +156,8 @@ class SectionItemBuilder extends StatelessWidget {
                 children: [
                   Text(
                     sectionData.name,
-                    style: GoogleFonts.lato(
+                    style: GoogleFonts.getFont(
+                      'Poppins',
                       fontSize: 14.0,
                       fontWeight: FontWeight.w500,
                       color: AppColors.grey600,
@@ -197,11 +174,12 @@ class SectionItemBuilder extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.all(3.0),
                       decoration: const BoxDecoration(
-                        color: AppColors.pallete800,
+                        color: AppColors.pallete700,
                       ),
                       child: Text(
                         'Preffered',
-                        style: GoogleFonts.lato(
+                        style: GoogleFonts.getFont(
+                          'Poppins',
                           fontSize: 11.0,
                           fontWeight: FontWeight.w600,
                           color: AppColors.backgroundColor,
