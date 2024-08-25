@@ -83,7 +83,7 @@ class _SectionsPageState extends State<SectionsPage> {
             ),
             const AletWidget(),
             const SizedBox(
-              height: 5.0,
+              height: 7.0,
             ),
             Expanded(
               child: GridView.builder(
