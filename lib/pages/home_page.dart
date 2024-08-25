@@ -72,6 +72,7 @@ class _HomePageState extends State<HomePage> {
             selectedIndex = index;
           });
         },
+        height: 65,
         destinations: const [
           NavigationDestination(
             icon: Icon(
