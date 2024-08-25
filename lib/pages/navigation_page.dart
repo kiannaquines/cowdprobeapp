@@ -10,13 +10,37 @@ class NavigationPage extends StatefulWidget {
 }
 
 class _NavigationPageState extends State<NavigationPage> {
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadingState();
+  }
+
+  Future<void> _loadingState() async {
+    await Future.delayed(const Duration(seconds: 3));
+    setState(() {
+      _isLoading = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: AppBarWidget(title: 'Navigation', textColor: AppColors.grey600,),
-      body: Center(
-        child: Text('Map Page'),
+    return Scaffold(
+      appBar: const AppBarWidget(
+        title: 'Navigation',
+        textColor: AppColors.grey600,
       ),
+      body: _isLoading
+          ? const Center(
+              child: CircularProgressIndicator(
+                color: AppColors.pallete800,
+              ),
+            )
+          : const Center(
+              child: Text('Map Page'),
+            ),
     );
   }
 }

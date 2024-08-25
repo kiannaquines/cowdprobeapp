@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:crowdapp/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:icons_flutter/icons_flutter.dart';
 import 'package:iconsax/iconsax.dart';
 
 class AletWidget extends StatelessWidget {

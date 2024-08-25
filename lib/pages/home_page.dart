@@ -1,4 +1,3 @@
-import 'package:icons_flutter/icons_flutter.dart';
 import 'package:crowdapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:crowdapp/pages/export_pages.dart';

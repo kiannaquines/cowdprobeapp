@@ -2,8 +2,16 @@ import 'package:crowdapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:crowdapp/pages/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+    [
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ],
+  );
   runApp(const MyApp());
 }
 
