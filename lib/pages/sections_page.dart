@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:crowdapp/models/export_models.dart';
 import 'package:crowdapp/widgets/export_widgets.dart';
+import 'package:icons_flutter/icons_flutter.dart';
 
 class SectionsPage extends StatefulWidget {
   const SectionsPage({super.key});
@@ -129,19 +130,8 @@ class SectionItemBuilder extends StatelessWidget {
                           end: Alignment.bottomCenter,
                           colors: [
                             Colors.transparent,
-                            AppColors.pallete100.withOpacity(0.3),
+                            AppColors.grey800.withOpacity(0.3),
                           ],
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      top: 1,
-                      left: 1,
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.bookmark,
-                          color: AppColors.backgroundColor,
                         ),
                       ),
                     ),
@@ -207,10 +197,13 @@ class SectionItemBuilder extends StatelessWidget {
                         }),
                       ),
                       GestureDetector(
-                        child: const Icon(
-                          Icons.location_pin,
-                          size: 17.0,
-                          color: AppColors.pallete700,
+                        child: const Text(
+                          '5 Likes',
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.grey600,
+                          ),
                         ),
                       )
                     ],

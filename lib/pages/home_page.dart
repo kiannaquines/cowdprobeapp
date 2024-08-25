@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
       case 1:
         bodyWidget = const SectionsPage();
       case 2:
-        bodyWidget = const ProfilePage();
+        bodyWidget = const NavigationPage();
       case 3:
         bodyWidget = const ProfilePage();
       default:
