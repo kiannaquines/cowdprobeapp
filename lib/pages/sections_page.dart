@@ -2,7 +2,7 @@ import 'package:crowdapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_flutter/icons_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:crowdapp/models/model_export.dart';
+import 'package:crowdapp/models/export_models.dart';
 
 class SectionsPage extends StatefulWidget {
   const SectionsPage({super.key});
