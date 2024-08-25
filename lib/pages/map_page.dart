@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:crowdapp/utils/colors.dart';
 
 class MapPage extends StatelessWidget {
   const MapPage({super.key});

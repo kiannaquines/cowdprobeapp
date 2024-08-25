@@ -1,6 +1,7 @@
 import 'package:crowdapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:crowdapp/pages/home_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,20 +16,18 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Geist',
         scaffoldBackgroundColor: AppColors.backgroundColor,
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
           backgroundColor: AppColors.backgroundColor,
-          elevation: 0.2,
-          shadowColor: AppColors.textDark,
         ),
         navigationBarTheme: NavigationBarThemeData(
           labelTextStyle: WidgetStateProperty.all(
-            const TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w600,
-              fontSize: 14.0,
+            GoogleFonts.getFont(
+              'Lato',
+              color: AppColors.grey800,
+              fontWeight: FontWeight.w500,
+              fontSize: 15.0,
             ),
           ),
         ),
