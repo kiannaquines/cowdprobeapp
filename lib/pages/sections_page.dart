@@ -77,7 +77,8 @@ class _SectionsPageState extends State<SectionsPage> {
     return Scaffold(
       appBar: const AppBarWidget(
         title: 'Facilities',
-        textColor: AppColors.grey600,
+        centerTitle: false,
+        textColor: AppColors.grey800,
       ),
       body: _isLoading
           ? const Center(

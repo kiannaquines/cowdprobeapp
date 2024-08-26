@@ -16,7 +16,8 @@ class _NavigationPageState extends State<NavigationPage> {
     return Scaffold(
       appBar: AppBarWidget(
         title: 'Navigation',
-        textColor: AppColors.grey600,
+        centerTitle: false,
+        textColor: AppColors.grey800,
         actions: [
           IconButton(
             onPressed: () {

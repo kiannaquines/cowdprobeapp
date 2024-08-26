@@ -11,7 +11,6 @@ class EditProfilePage extends StatefulWidget {
 }
 
 class _EditProfilePageState extends State<EditProfilePage> {
-
   late TextEditingController _emailController;
   late TextEditingController _usernameController;
   late TextEditingController _passwordController;
@@ -68,6 +67,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ),
           ),
         ),
+        toolbarHeight: 50,
         centerTitle: true,
         forceMaterialTransparency: true,
         actions: const [

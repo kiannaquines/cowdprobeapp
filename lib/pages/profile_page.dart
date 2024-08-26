@@ -33,7 +33,8 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       appBar: AppBarWidget(
         title: 'Your Profile',
-        textColor: AppColors.grey600,
+        centerTitle: false,
+        textColor: AppColors.grey800,
         actions: [
           IconButton(
             onPressed: () {
@@ -180,8 +181,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   children: List.generate(6, (index) {
                                     return ClipRRect(
                                       borderRadius: const BorderRadius.all(
-                                        Radius.circular(15.0)
-                                      ),
+                                          Radius.circular(15.0)),
                                       child: Container(
                                         color: AppColors.backgroundColor,
                                         margin: const EdgeInsets.symmetric(
@@ -230,8 +230,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   children: List.generate(6, (index) {
                                     return ClipRRect(
                                       borderRadius: const BorderRadius.all(
-                                        Radius.circular(15.0)
-                                      ),
+                                          Radius.circular(15.0)),
                                       child: Container(
                                         color: AppColors.backgroundColor,
                                         margin: const EdgeInsets.symmetric(

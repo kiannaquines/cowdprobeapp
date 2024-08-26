@@ -79,6 +79,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
     return Scaffold(
       appBar: const AppBarWidget(
         title: 'TaraLibrary',
+        centerTitle: false,
         textColor: AppColors.pallete700,
       ),
       body: _isLoading
@@ -147,7 +148,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                         children: List.generate(6, (index) {
                           return Container(
                             color: AppColors.backgroundColor,
-                            margin: const EdgeInsets.symmetric(vertical: 4.0), 
+                            margin: const EdgeInsets.symmetric(vertical: 4.0),
                             child: ListTile(
                               splashColor: AppColors.pallete100,
                               leading: const Icon(
@@ -294,8 +295,8 @@ class SectionItemBuilder extends StatelessWidget {
                     sectionData.name,
                     style: GoogleFonts.getFont(
                       'Poppins',
-                      color: AppColors.pallete950,
-                      fontWeight: FontWeight.w600,
+                      color: AppColors.grey600,
+                      fontWeight: FontWeight.w400,
                       fontSize: 14.0,
                     ),
                     overflow: TextOverflow.ellipsis,
@@ -305,7 +306,7 @@ class SectionItemBuilder extends StatelessWidget {
                     style: GoogleFonts.getFont(
                       'Poppins',
                       fontSize: 12.0,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w300,
                       color: AppColors.grey600,
                     ),
                     textAlign: TextAlign.start,
@@ -357,9 +358,10 @@ class SectionItemBuilder extends StatelessWidget {
                         }),
                       ),
                       GestureDetector(
-                        child: const Text(
+                        child: Text(
                           '5 Likes',
-                          style: TextStyle(
+                          style: GoogleFonts.getFont(
+                            'Poppins',
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
                             color: AppColors.grey600,

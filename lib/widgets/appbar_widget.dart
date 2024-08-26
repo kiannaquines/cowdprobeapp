@@ -7,10 +7,12 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final Color textColor;
   final List<Widget> actions;
+  final bool centerTitle;
 
   const AppBarWidget({
     super.key,
     required this.title,
+    required this.centerTitle,
     required this.textColor,
     List<Widget>? actions,
   }) : actions = actions ??
@@ -48,7 +50,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           fontSize: 20.0,
         ),
       ),
-      toolbarHeight: 60,
+      centerTitle: centerTitle,
+      toolbarHeight: 50,
       forceMaterialTransparency: true,
       actions: actions,
     );
