@@ -93,6 +93,18 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Text(
+                    'Popular to students',
+                    style: GoogleFonts.getFont(
+                      'Poppins',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.grey600,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
                   Expanded(
                     flex: 2,
                     child: SingleChildScrollView(
@@ -120,7 +132,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                     'Activities',
                     style: GoogleFonts.getFont(
                       'Poppins',
-                      fontSize: 15,
+                      fontSize: 20,
                       fontWeight: FontWeight.w500,
                       color: AppColors.grey600,
                     ),

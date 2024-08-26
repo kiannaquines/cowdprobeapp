@@ -36,8 +36,13 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: AppColors.pallete800,
               ),
             )
-          : const Center(
-              child: Text('Profile Page'),
+          : const Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Kian Naquines')
+                ],
+              ),
             ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.pallete700,

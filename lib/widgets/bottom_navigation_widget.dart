@@ -52,7 +52,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
             size: 25.0,
             color: AppColors.pallete700,
           ),
-          label: 'Sections',
+          label: 'Facilities',
         ),
         NavigationDestination(
           icon: Icon(

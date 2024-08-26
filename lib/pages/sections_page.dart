@@ -76,7 +76,7 @@ class _SectionsPageState extends State<SectionsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const AppBarWidget(
-        title: 'Sections',
+        title: 'Facilities',
         textColor: AppColors.grey600,
       ),
       body: _isLoading
@@ -91,6 +91,18 @@ class _SectionsPageState extends State<SectionsPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Text(
+                    'Library Sections',
+                    style: GoogleFonts.getFont(
+                      'Poppins',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.grey600,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
                   Expanded(
                     child: GridView.builder(
                       gridDelegate:
