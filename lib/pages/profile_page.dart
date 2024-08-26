@@ -75,7 +75,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: 10,
                       ),
                       CircleAvatar(
-                        radius: 60,
+                        radius: 50,
                         backgroundColor: AppColors.pallete800,
                         child: Text(
                           'KN',
@@ -189,7 +189,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         child: ListTile(
                                           splashColor: AppColors.pallete100,
                                           leading: const Icon(
-                                            Feather.book,
+                                            Feather.archive,
                                             color: AppColors.pallete700,
                                             size: 20.0,
                                           ),
