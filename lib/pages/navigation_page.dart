@@ -1,6 +1,7 @@
 import 'package:crowdapp/utils/colors.dart';
 import 'package:crowdapp/widgets/appbar_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_flutter/icons_flutter.dart';
 
 class NavigationPage extends StatefulWidget {
@@ -39,8 +40,11 @@ class _NavigationPageState extends State<NavigationPage> {
           ),
         ],
       ),
-      body: const Center(
-        child: Text('Navigation Page'),
+      body: Center(
+        child: Text(
+          'Navigation Page',
+          style: GoogleFonts.getFont('Poppins'),
+        ),
       ),
     );
   }

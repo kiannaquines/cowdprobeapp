@@ -1,3 +1,4 @@
+import 'package:crowdapp/pages/auth/login_page.dart';
 import 'package:crowdapp/pages/edit_profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:crowdapp/utils/colors.dart';
@@ -47,7 +48,7 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           IconButton(
             onPressed: () {
-              debugPrint('Logout Settings');
+              _showMyDialog(context);
             },
             icon: const Icon(
               Feather.log_out,
@@ -281,6 +282,64 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
             ),
+    );
+  }
+
+  Future<void> _showMyDialog(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            'Confirmation',
+            style: GoogleFonts.getFont(
+              'Poppins',
+              fontWeight: FontWeight.w500,
+              color: AppColors.grey800,
+            ),
+          ),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text(
+                  'Are you sure you want to logout?',
+                  style: GoogleFonts.getFont(
+                    'Poppins',
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              style: ButtonStyle(
+                overlayColor: WidgetStateProperty.all(
+                  AppColors.pallete50,
+                ),
+              ),
+              child: Text(
+                'Logout',
+                style: GoogleFonts.getFont(
+                  'Poppins',
+                  color: AppColors.pallete800,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              onPressed: () {
+                 Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const LoginPage(),
+          ),
+        );
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }
