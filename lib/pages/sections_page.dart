@@ -96,7 +96,7 @@ class _SectionsPageState extends State<SectionsPage> {
                     style: GoogleFonts.getFont(
                       'Poppins',
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: AppColors.grey600,
                     ),
                   ),
@@ -243,7 +243,7 @@ class SectionItemBuilder extends StatelessWidget {
                       style: GoogleFonts.getFont(
                         'Poppins',
                         fontSize: 14.0,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w400,
                         color: AppColors.grey600,
                       ),
                       textAlign: TextAlign.start,
@@ -254,8 +254,8 @@ class SectionItemBuilder extends StatelessWidget {
                       'KEPLRC Library Facilities',
                       style: GoogleFonts.getFont(
                         'Poppins',
-                        fontSize: 10.0,
-                        fontWeight: FontWeight.w500,
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.w300,
                         color: AppColors.grey600,
                       ),
                       textAlign: TextAlign.start,
@@ -281,7 +281,7 @@ class SectionItemBuilder extends StatelessWidget {
                           style: GoogleFonts.getFont(
                             'Poppins',
                             fontSize: 10.0,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w400,
                             color: AppColors.backgroundColor,
                           ),
                           textAlign: TextAlign.start,
@@ -307,11 +307,12 @@ class SectionItemBuilder extends StatelessWidget {
                           }),
                         ),
                         GestureDetector(
-                          child: const Text(
+                          child: Text(
                             '5 Likes',
-                            style: TextStyle(
+                            style: GoogleFonts.getFont(
+                              'Poppins',
                               fontSize: 12.0,
-                              fontWeight: FontWeight.w400,
+                              fontWeight: FontWeight.w300,
                               color: AppColors.grey600,
                             ),
                           ),

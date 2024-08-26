@@ -95,7 +95,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         style: GoogleFonts.getFont(
                           'Poppins',
                           fontSize: 18.0,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           color: AppColors.grey600,
                         ),
                       ),
@@ -104,7 +104,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         style: GoogleFonts.getFont(
                           'Poppins',
                           fontSize: 14.0,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w300,
                           color: AppColors.grey800,
                         ),
                       ),
@@ -134,7 +134,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           style: GoogleFonts.getFont(
                             'Poppins',
                             color: AppColors.pallete800,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
@@ -158,7 +158,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           labelStyle: GoogleFonts.getFont(
                             'Poppins',
                             fontSize: 14.0,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w400,
                           ),
                           tabs: const [
                             Tab(
@@ -199,7 +199,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                               'Poppins',
                                               color: AppColors.pallete950,
                                               fontSize: 14,
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w400,
                                             ),
                                           ),
                                           trailing: const Icon(
@@ -212,6 +212,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             style: GoogleFonts.getFont(
                                               'Poppins',
                                               color: AppColors.pallete900,
+                                              fontWeight: FontWeight.w300,
                                               fontSize: 12.0,
                                             ),
                                           ),
@@ -249,7 +250,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                               'Poppins',
                                               fontSize: 14,
                                               color: AppColors.pallete950,
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w400,
                                             ),
                                           ),
                                           trailing: const Icon(
@@ -263,6 +264,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                               'Poppins',
                                               color: AppColors.pallete900,
                                               fontSize: 12.0,
+                                              fontWeight: FontWeight.w300,
                                             ),
                                           ),
                                         ),

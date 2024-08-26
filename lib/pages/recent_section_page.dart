@@ -98,7 +98,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                     style: GoogleFonts.getFont(
                       'Poppins',
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: AppColors.grey600,
                     ),
                   ),
@@ -133,7 +133,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                     style: GoogleFonts.getFont(
                       'Poppins',
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: AppColors.grey600,
                     ),
                   ),
@@ -160,7 +160,8 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                                 style: GoogleFonts.getFont(
                                   'Poppins',
                                   color: AppColors.pallete950,
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
                                 ),
                               ),
                               trailing: const Icon(
@@ -173,6 +174,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                                 style: GoogleFonts.getFont(
                                   'Poppins',
                                   color: AppColors.pallete900,
+                                  fontWeight: FontWeight.w300,
                                   fontSize: 12.0,
                                 ),
                               ),
