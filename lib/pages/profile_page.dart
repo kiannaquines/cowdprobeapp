@@ -94,7 +94,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         'Kian G. Naquines',
                         style: GoogleFonts.getFont(
                           'Poppins',
-                          fontSize: 20.0,
+                          fontSize: 18.0,
                           fontWeight: FontWeight.w500,
                           color: AppColors.grey600,
                         ),
@@ -178,36 +178,42 @@ class _ProfilePageState extends State<ProfilePage> {
                                 padding: const EdgeInsets.all(15.0),
                                 child: Column(
                                   children: List.generate(6, (index) {
-                                    return Container(
-                                      color: AppColors.backgroundColor,
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 4.0),
-                                      child: ListTile(
-                                        splashColor: AppColors.pallete100,
-                                        leading: const Icon(
-                                          Feather.book,
-                                          color: AppColors.pallete700,
-                                          size: 20.0,
-                                        ),
-                                        title: Text(
-                                          'Information Technology',
-                                          style: GoogleFonts.getFont(
-                                            'Poppins',
-                                            color: AppColors.pallete950,
-                                            fontWeight: FontWeight.w500,
+                                    return ClipRRect(
+                                      borderRadius: const BorderRadius.all(
+                                        Radius.circular(15.0)
+                                      ),
+                                      child: Container(
+                                        color: AppColors.backgroundColor,
+                                        margin: const EdgeInsets.symmetric(
+                                            vertical: 4.0),
+                                        child: ListTile(
+                                          splashColor: AppColors.pallete100,
+                                          leading: const Icon(
+                                            Feather.book,
+                                            color: AppColors.pallete700,
+                                            size: 20.0,
                                           ),
-                                        ),
-                                        trailing: const Icon(
-                                          Feather.more_vertical,
-                                          color: AppColors.pallete800,
-                                          size: 20.0,
-                                        ),
-                                        subtitle: Text(
-                                          'You liked reference section',
-                                          style: GoogleFonts.getFont(
-                                            'Poppins',
-                                            color: AppColors.pallete900,
-                                            fontSize: 12.0,
+                                          title: Text(
+                                            'Information Technology',
+                                            style: GoogleFonts.getFont(
+                                              'Poppins',
+                                              color: AppColors.pallete950,
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                          trailing: const Icon(
+                                            Feather.more_vertical,
+                                            color: AppColors.pallete800,
+                                            size: 20.0,
+                                          ),
+                                          subtitle: Text(
+                                            'You liked reference section',
+                                            style: GoogleFonts.getFont(
+                                              'Poppins',
+                                              color: AppColors.pallete900,
+                                              fontSize: 12.0,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -221,37 +227,43 @@ class _ProfilePageState extends State<ProfilePage> {
                                 padding: const EdgeInsets.all(15.0),
                                 child: Column(
                                   children: List.generate(6, (index) {
-                                    return Container(
-                                      color: AppColors.backgroundColor,
-                                      margin: const EdgeInsets.symmetric(
-                                        vertical: 4.0,
+                                    return ClipRRect(
+                                      borderRadius: const BorderRadius.all(
+                                        Radius.circular(15.0)
                                       ),
-                                      child: ListTile(
-                                        splashColor: AppColors.pallete100,
-                                        leading: const Icon(
-                                          Feather.activity,
-                                          color: AppColors.pallete700,
-                                          size: 20.0,
+                                      child: Container(
+                                        color: AppColors.backgroundColor,
+                                        margin: const EdgeInsets.symmetric(
+                                          vertical: 4.0,
                                         ),
-                                        title: Text(
-                                          'Reference Section',
-                                          style: GoogleFonts.getFont(
-                                            'Poppins',
-                                            color: AppColors.pallete950,
-                                            fontWeight: FontWeight.w500,
+                                        child: ListTile(
+                                          splashColor: AppColors.pallete100,
+                                          leading: const Icon(
+                                            Feather.activity,
+                                            color: AppColors.pallete700,
+                                            size: 20.0,
                                           ),
-                                        ),
-                                        trailing: const Icon(
-                                          Feather.more_vertical,
-                                          color: AppColors.pallete800,
-                                          size: 20.0,
-                                        ),
-                                        subtitle: Text(
-                                          'You visited last January 21, 2024',
-                                          style: GoogleFonts.getFont(
-                                            'Poppins',
-                                            color: AppColors.pallete900,
-                                            fontSize: 12.0,
+                                          title: Text(
+                                            'Reference Section',
+                                            style: GoogleFonts.getFont(
+                                              'Poppins',
+                                              fontSize: 14,
+                                              color: AppColors.pallete950,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                          trailing: const Icon(
+                                            Feather.more_vertical,
+                                            color: AppColors.pallete800,
+                                            size: 20.0,
+                                          ),
+                                          subtitle: Text(
+                                            'You visited last January 21, 2024',
+                                            style: GoogleFonts.getFont(
+                                              'Poppins',
+                                              color: AppColors.pallete900,
+                                              fontSize: 12.0,
+                                            ),
                                           ),
                                         ),
                                       ),

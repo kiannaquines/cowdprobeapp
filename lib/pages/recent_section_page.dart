@@ -97,7 +97,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                     'Popular to students',
                     style: GoogleFonts.getFont(
                       'Poppins',
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.w500,
                       color: AppColors.grey600,
                     ),
@@ -132,7 +132,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                     'Activities',
                     style: GoogleFonts.getFont(
                       'Poppins',
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.w500,
                       color: AppColors.grey600,
                     ),

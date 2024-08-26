@@ -95,7 +95,7 @@ class _SectionsPageState extends State<SectionsPage> {
                     'Library Sections',
                     style: GoogleFonts.getFont(
                       'Poppins',
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.w500,
                       color: AppColors.grey600,
                     ),
