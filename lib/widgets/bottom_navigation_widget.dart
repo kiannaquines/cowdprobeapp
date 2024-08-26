@@ -33,11 +33,11 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
         NavigationDestination(
           icon: Icon(
             Iconsax.home,
-            size: 25.0,
+            size: 20.0,
           ),
           selectedIcon: Icon(
             Iconsax.home,
-            size: 25.0,
+            size: 20.0,
             color: AppColors.pallete700,
           ),
           label: 'Home',
@@ -45,11 +45,11 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
         NavigationDestination(
           icon: Icon(
             Iconsax.archive,
-            size: 25.0,
+            size: 20.0,
           ),
           selectedIcon: Icon(
             Iconsax.archive,
-            size: 25.0,
+            size: 20.0,
             color: AppColors.pallete700,
           ),
           label: 'Facilities',
@@ -57,11 +57,11 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
         NavigationDestination(
           icon: Icon(
             Iconsax.map,
-            size: 25.0,
+            size: 20.0,
           ),
           selectedIcon: Icon(
             Iconsax.map,
-            size: 25.0,
+            size: 20.0,
             color: AppColors.pallete700,
           ),
           label: 'Navigation',
@@ -69,11 +69,11 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
         NavigationDestination(
           icon: Icon(
             Iconsax.user,
-            size: 25.0,
+            size: 20.0,
           ),
           selectedIcon: Icon(
             Iconsax.user,
-            size: 25.0,
+            size: 20.0,
             color: AppColors.pallete700,
           ),
           label: 'Profile',

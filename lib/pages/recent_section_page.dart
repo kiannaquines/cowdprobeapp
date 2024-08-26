@@ -153,6 +153,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                               leading: const Icon(
                                 Iconsax.clock,
                                 color: AppColors.pallete700,
+                                size: 20.0,
                               ),
                               title: Text(
                                 'Reference Section',
@@ -165,6 +166,7 @@ class _RecentSectionPageState extends State<RecentSectionPage> {
                               trailing: const Icon(
                                 Feather.more_vertical,
                                 color: AppColors.pallete800,
+                                size: 20.0,
                               ),
                               subtitle: Text(
                                 'You visited last January 21, 2024',

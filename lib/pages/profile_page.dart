@@ -1,9 +1,9 @@
+import 'package:crowdapp/pages/edit_profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:crowdapp/utils/colors.dart';
 import 'package:crowdapp/widgets/appbar_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_flutter/icons_flutter.dart';
-import 'package:iconsax/iconsax.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -39,13 +39,19 @@ class _ProfilePageState extends State<ProfilePage> {
             onPressed: () {
               debugPrint('Profile Settings');
             },
-            icon: const Icon(Feather.settings),
+            icon: const Icon(
+              Feather.settings,
+              size: 20.0,
+            ),
           ),
           IconButton(
             onPressed: () {
               debugPrint('Logout Settings');
             },
-            icon: const Icon(Feather.log_out),
+            icon: const Icon(
+              Feather.log_out,
+              size: 20.0,
+            ),
           ),
         ],
       ),
@@ -106,7 +112,14 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: 5.0,
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const EditProfilePage(),
+                            ),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.backgroundColor,
                           overlayColor: AppColors.pallete100,
@@ -132,12 +145,12 @@ class _ProfilePageState extends State<ProfilePage> {
                           labelColor: AppColors.pallete800,
                           unselectedLabelColor: AppColors.grey600,
                           indicatorColor: AppColors.pallete800,
+                          dividerColor: AppColors.grey200,
                           indicatorSize: TabBarIndicatorSize.tab,
                           overlayColor: WidgetStateProperty.resolveWith<Color?>(
                             (Set<WidgetState> states) {
                               if (states.contains(WidgetState.pressed)) {
-                                return AppColors.pallete800
-                                    .withOpacity(0.1);
+                                return AppColors.pallete800.withOpacity(0.1);
                               }
                               return null;
                             },
@@ -172,11 +185,12 @@ class _ProfilePageState extends State<ProfilePage> {
                                       child: ListTile(
                                         splashColor: AppColors.pallete100,
                                         leading: const Icon(
-                                          Iconsax.clock,
+                                          Feather.book,
                                           color: AppColors.pallete700,
+                                          size: 20.0,
                                         ),
                                         title: Text(
-                                          'Reference Section',
+                                          'Information Technology',
                                           style: GoogleFonts.getFont(
                                             'Poppins',
                                             color: AppColors.pallete950,
@@ -186,9 +200,10 @@ class _ProfilePageState extends State<ProfilePage> {
                                         trailing: const Icon(
                                           Feather.more_vertical,
                                           color: AppColors.pallete800,
+                                          size: 20.0,
                                         ),
                                         subtitle: Text(
-                                          'You visited last January 21, 2024',
+                                          'You liked reference section',
                                           style: GoogleFonts.getFont(
                                             'Poppins',
                                             color: AppColors.pallete900,
@@ -209,12 +224,14 @@ class _ProfilePageState extends State<ProfilePage> {
                                     return Container(
                                       color: AppColors.backgroundColor,
                                       margin: const EdgeInsets.symmetric(
-                                          vertical: 4.0),
+                                        vertical: 4.0,
+                                      ),
                                       child: ListTile(
                                         splashColor: AppColors.pallete100,
                                         leading: const Icon(
-                                          Iconsax.clock,
+                                          Feather.activity,
                                           color: AppColors.pallete700,
+                                          size: 20.0,
                                         ),
                                         title: Text(
                                           'Reference Section',
@@ -227,6 +244,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         trailing: const Icon(
                                           Feather.more_vertical,
                                           color: AppColors.pallete800,
+                                          size: 20.0,
                                         ),
                                         subtitle: Text(
                                           'You visited last January 21, 2024',

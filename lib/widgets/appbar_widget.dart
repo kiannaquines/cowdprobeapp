@@ -20,6 +20,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                 icon: Icon(
                   Feather.grid,
                   color: AppColors.grey600,
+                  size: 20.0,
                 ),
               ),
               IconButton(
@@ -27,6 +28,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                 icon: Icon(
                   Feather.camera,
                   color: AppColors.grey600,
+                   size: 20.0,
                 ),
               ),
             ];
@@ -43,7 +45,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           'Poppins',
           color: textColor,
           fontWeight: FontWeight.w500,
-          fontSize: 25.0,
+          fontSize: 20.0,
         ),
       ),
       toolbarHeight: 60,
