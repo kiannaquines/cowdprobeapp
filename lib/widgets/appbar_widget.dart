@@ -24,7 +24,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         title,
         style: GoogleFonts.getFont('Poppins',
           color: textColor,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
           fontSize: 25.0,
         ),
       ),

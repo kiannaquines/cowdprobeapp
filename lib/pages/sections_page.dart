@@ -1,3 +1,4 @@
+import 'package:crowdapp/pages/section_info_page.dart';
 import 'package:crowdapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -75,7 +76,7 @@ class _SectionsPageState extends State<SectionsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const AppBarWidget(
-        title: 'Library Sections',
+        title: 'Sections',
         textColor: AppColors.grey600,
       ),
       body: _isLoading
@@ -127,177 +128,189 @@ class SectionItemBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: const BorderRadius.only(
-        bottomLeft: Radius.circular(5.0),
-        bottomRight: Radius.circular(5.0),
-      ),
-      child: Container(
-        color: AppColors.backgroundColor,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Expanded(
-              child: ClipRRect(
-                borderRadius: const BorderRadius.vertical(
-                  top: Radius.circular(5.0),
-                  bottom: Radius.circular(5.0),
-                ),
-                child: Stack(
-                  fit: StackFit.expand,
-                  children: [
-                    Image.network(
-                      sectionData.imageUrl,
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                      loadingBuilder: (BuildContext context, Widget child,
-                          ImageChunkEvent? loadingProgress) {
-                        if (loadingProgress == null) {
-                          return child;
-                        } else {
-                          return Center(
-                            child: CircularProgressIndicator(
-                              color: AppColors.pallete800,
-                              value: loadingProgress.expectedTotalBytes != null
-                                  ? loadingProgress.cumulativeBytesLoaded /
-                                      (loadingProgress.expectedTotalBytes ?? 1)
-                                  : null,
-                            ),
-                          );
-                        }
-                      },
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            Colors.transparent,
-                            AppColors.grey800.withOpacity(0.3),
-                          ],
-                        ),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const SectionInfoPage(),
+          ),
+        );
+      },
+      child: ClipRRect(
+        borderRadius: const BorderRadius.only(
+          bottomLeft: Radius.circular(5.0),
+          bottomRight: Radius.circular(5.0),
+        ),
+        child: Container(
+          color: AppColors.backgroundColor,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.vertical(
+                    top: Radius.circular(5.0),
+                    bottom: Radius.circular(5.0),
+                  ),
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Image.network(
+                        sectionData.imageUrl,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                        loadingBuilder: (BuildContext context, Widget child,
+                            ImageChunkEvent? loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          } else {
+                            return Center(
+                              child: CircularProgressIndicator(
+                                color: AppColors.pallete800,
+                                value: loadingProgress.expectedTotalBytes !=
+                                        null
+                                    ? loadingProgress.cumulativeBytesLoaded /
+                                        (loadingProgress.expectedTotalBytes ??
+                                            1)
+                                    : null,
+                              ),
+                            );
+                          }
+                        },
                       ),
-                    ),
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      child: Container(
+                      Container(
                         decoration: BoxDecoration(
-                          color: AppColors.pallete800.withOpacity(0.8),
-                          borderRadius: const BorderRadius.only(
-                            bottomRight: Radius.circular(5.0),
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              Colors.transparent,
+                              AppColors.grey800.withOpacity(0.3),
+                            ],
                           ),
                         ),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 4.0,
-                          vertical: 2.0,
+                      ),
+                      Positioned(
+                        top: 0,
+                        left: 0,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: AppColors.pallete800.withOpacity(0.8),
+                            borderRadius: const BorderRadius.only(
+                              bottomRight: Radius.circular(5.0),
+                            ),
+                          ),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 4.0,
+                            vertical: 2.0,
+                          ),
+                          child: Text(
+                            'Most Visited',
+                            style: GoogleFonts.getFont(
+                              'Poppins',
+                              color: AppColors.backgroundColor,
+                              fontSize: 8,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      sectionData.name,
+                      style: GoogleFonts.getFont(
+                        'Poppins',
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.grey600,
+                      ),
+                      textAlign: TextAlign.start,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                    Text(
+                      'KEPLRC Library Facilities',
+                      style: GoogleFonts.getFont(
+                        'Poppins',
+                        fontSize: 10.0,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.grey600,
+                      ),
+                      textAlign: TextAlign.start,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                    const SizedBox(height: 4.0), // Add some spacing
+                    ClipRRect(
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(
+                          2.0,
+                        ),
+                      ),
+                      child: Container(
+                        padding: const EdgeInsets.all(2.0),
+                        decoration: BoxDecoration(
+                          color: sectionData.status == 'Spacious'
+                              ? AppColors.pallete700
+                              : Colors.red,
                         ),
                         child: Text(
-                          'Most Visited',
+                          sectionData.status,
                           style: GoogleFonts.getFont(
                             'Poppins',
+                            fontSize: 10.0,
+                            fontWeight: FontWeight.w600,
                             color: AppColors.backgroundColor,
-                            fontSize: 8,
-                            fontWeight: FontWeight.w500,
                           ),
+                          textAlign: TextAlign.start,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
                         ),
                       ),
+                    ),
+                    const SizedBox(height: 4.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: List.generate(5, (index) {
+                            return Icon(
+                              Icons.star,
+                              color: index < sectionData.rating
+                                  ? Colors.amber
+                                  : Colors.grey,
+                              size: 16.0,
+                            );
+                          }),
+                        ),
+                        GestureDetector(
+                          child: const Text(
+                            '5 Likes',
+                            style: TextStyle(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.w400,
+                              color: AppColors.grey600,
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   ],
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    sectionData.name,
-                    style: GoogleFonts.getFont(
-                      'Poppins',
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.grey600,
-                    ),
-                    textAlign: TextAlign.start,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                  Text(
-                    'KEPLRC Library Facilities',
-                    style: GoogleFonts.getFont(
-                      'Poppins',
-                      fontSize: 10.0,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.grey600,
-                    ),
-                    textAlign: TextAlign.start,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                  const SizedBox(height: 4.0), // Add some spacing
-                  ClipRRect(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(
-                        2.0,
-                      ),
-                    ),
-                    child: Container(
-                      padding: const EdgeInsets.all(2.0),
-                      decoration: BoxDecoration(
-                        color: sectionData.status == 'Spacious'
-                            ? AppColors.pallete700
-                            : Colors.red,
-                      ),
-                      child: Text(
-                        sectionData.status,
-                        style: GoogleFonts.getFont(
-                          'Poppins',
-                          fontSize: 10.0,
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.backgroundColor,
-                        ),
-                        textAlign: TextAlign.start,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 4.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Row(
-                        children: List.generate(5, (index) {
-                          return Icon(
-                            Icons.star,
-                            color: index < sectionData.rating
-                                ? Colors.amber
-                                : Colors.grey,
-                            size: 16.0,
-                          );
-                        }),
-                      ),
-                      GestureDetector(
-                        child: const Text(
-                          '5 Likes',
-                          style: TextStyle(
-                            fontSize: 12.0,
-                            fontWeight: FontWeight.w400,
-                            color: AppColors.grey600,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
