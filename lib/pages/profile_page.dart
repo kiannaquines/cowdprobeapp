@@ -317,6 +317,24 @@ class _ProfilePageState extends State<ProfilePage> {
             TextButton(
               style: ButtonStyle(
                 overlayColor: WidgetStateProperty.all(
+                  AppColors.grey200,
+                ),
+              ),
+              child: Text(
+                'Cancel',
+                style: GoogleFonts.getFont(
+                  'Poppins',
+                  color: AppColors.grey600,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+            TextButton(
+              style: ButtonStyle(
+                overlayColor: WidgetStateProperty.all(
                   AppColors.pallete50,
                 ),
               ),
@@ -329,12 +347,12 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               onPressed: () {
-                 Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const LoginPage(),
-          ),
-        );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginPage(),
+                  ),
+                );
               },
             ),
           ],
